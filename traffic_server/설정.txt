@@ -1,0 +1,67 @@
+python 및 가상환경 세팅
+
+pip install venv
+
+venvs/djangoProject <- 장고 관련 가상환경 설정
+
+python -m venv djangoProject
+
+djangoProject/script/activate
+
+pip install django
+pip install selenium
+pip install undetacable-chrome
+pip install setuptools
+
+pip install selenium-wire
+pip install blinker==1.7.0 #wire-selenium dependency The solution is to add direct dependency on blinker<1.8.0 
+
+
+-----------환경 설정 끝--------------------
+
+mkdir traffic_server
+
+django-admin startproject index .
+
+python manage.py startapp traffic
+# traffic이라는 dir 을 생성하고 해당 app을 장고로 생성
+
+?/settings.py
+INSTALLED_APPS = [
+...
+    'traffic',
+]
+# setting에 해당 app을 등록
+
+user data 변경
+https://www.inflearn.com/questions/897297/user-agent-data-%EB%B3%80%EA%B2%BD%ED%95%98%EB%8A%94-%EB%B2%95-%EA%B0%95%EC%9D%98%EC%97%90%EC%84%9C-%EC%95%84%EB%9E%98%EC%B2%98%EB%9F%BC-%EA%B3%84%EC%86%8D-%EC%98%A4%EB%A5%98%EA%B0%80-%EC%83%9D%EA%B9%81%EB%8B%88%EB%8B%A4
+
+stealth and fake-agent
+https://blog.hashscraper.com/about-undetect-crawling/
+https://scrapeops.io/selenium-web-scraping-playbook/python-selenium-stealth-web-scraping/
+
+
+proxy
+https://scrapfly.io/blog/web-scraping-without-blocking-using-undetected-chromedriver/
+
+test
+https://antoinevastel.com/bot%20detection/2023/02/19/new-headless-chrome.html
+https://intoli.com/blog/making-chrome-headless-undetectable/chrome-headless-test.html
+https://antoinevastel.com/bots
+
+
+
+
+// http://localhost:9099/redirect2/get3?mid=87618755083&loopNum=1&search1=%EC%8D%A8%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0  서큘
+// http://localhost:9099/redirect2/get3?mid=87557269176&loopNum=1&search1=가정용 미니 제빙기
+|2024-05-21 21:25:24||index.utils.makeTraffic|::  startIndex 1
+|2024-05-21 21:25:24||index.utils.makeTraffic|::  pageIndex 1
+|2024-05-21 21:27:08||index.utils.makeTraffic|::  productPageElementList size  =  2
+|2024-05-21 21:27:16||index.utils.makeTraffic|::  productClick done = 3
+|2024-05-21 21:27:16||index.utils.makeTraffic|::  productPageElementList size  =  1
+|2024-05-21 21:27:21||index.utils.makeTraffic|::  productClick done = 2
+|2024-05-21 21:27:21||index.utils.makeTraffic|::  makeTraffic done. clink num = 5
+21일 써큘레이터  29 page
+22일 써큘레이터  31 page
+21:50 HEADFUL +1 마우스 이동 없음.
+22:55 headful +1 마우스 이동 추가.
